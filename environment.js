@@ -236,15 +236,13 @@ function draw() {
 
   cars.forEach(car => {
     car.draw(context);
-    if (car.id == 0) {
-      // car.runNetworkFrame(true);
-      if (actionsTaken < 1e4) {
-        car.runPretrainFrame();
-      } else {
-        car.runNetworkFrame(true);
-      }
-      actionsTaken++;
+    // car.runNetworkFrame(true);
+    if (actionsTaken < 1e4) {
+      car.runPretrainFrame();
+    } else {
+      car.runNetworkFrame(true);
     }
+    actionsTaken++;
   });
 }
 

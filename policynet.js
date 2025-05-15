@@ -137,7 +137,7 @@ export default class PolicyNetwork {
 
   trainOnPolicy(states, policy = this.defaultPolicy) {
     const labels = states.map(policy);
-    console.log(states, labels);
+    //console.log(states, labels);
     this.network.fit(states, labels);
     return labels;
   }
